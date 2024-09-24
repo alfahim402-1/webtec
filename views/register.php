@@ -18,6 +18,14 @@
             <input type="email" id="email" name="email" required>
             <div class="error" id="emailError"></div>
             
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <div class="error" id="roleError"></div>
+            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <div class="error" id="passwordError"></div>
@@ -36,32 +44,41 @@
         function validateForm() {
             let username = document.getElementById('username').value;
             let email = document.getElementById('email').value;
+            let role = document.getElementById('role').value;
             let password = document.getElementById('password').value;
             let confirmPassword = document.getElementById('confirm-password').value;
 
             let usernameError = document.getElementById('usernameError');
             let emailError = document.getElementById('emailError');
+            let roleError = document.getElementById('roleError');
             let passwordError = document.getElementById('passwordError');
             let confirmPasswordError = document.getElementById('confirmPasswordError');
 
             let valid = true;
 
-            
+           
             usernameError.textContent = "";
             emailError.textContent = "";
+            roleError.textContent = "";
             passwordError.textContent = "";
             confirmPasswordError.textContent = "";
 
-        
+       
             if (username.trim() === "") {
                 usernameError.textContent = "Username is required";
                 valid = false;
             }
 
-            
+            /
             let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email)) {
                 emailError.textContent = "Please enter a valid email address";
+                valid = false;
+            }
+
+           
+            if (role === "") {
+                roleError.textContent = "Role is required";
                 valid = false;
             }
 
@@ -81,3 +98,4 @@
     </script>
 </body>
 </html>
+
