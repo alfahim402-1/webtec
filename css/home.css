@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Top-5.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+ 
+  .login-container, .register-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login-container h2, .register-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #007BFF;
+  }
+  
+  .login-container label, .register-container label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .login-container input[type="email"],
+  .login-container input[type="password"],
+  .register-container input[type="text"],
+  .register-container input[type="email"],
+  .register-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .login-container button,
+  .register-container button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .login-container button:hover,
+  .register-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .error {
+    color: red;
+    font-size: 0.9rem;
+  }
+  
+ 
+  header {
+    background-color: #007BFF;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+ 
+  nav {
+    float: left;
+    width: 25%;
+    padding: 30px;
+    background: #aecae6;
+    border-radius: 8px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 15px 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #444;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+  }
+  
+  nav ul li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+    border-color: #ffcc00;
+  }
+  
+  article {
+    float: left;
+    width: 70%;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  article h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+  
+  article p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  article p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  footer {
+    background: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    nav, article {
+        width: 100%;
+        margin-left: 0;
+    }
+  
+    article {
+        margin-top: 10px;
+    }
+  
+    header h2 {
+        font-size: 2rem;
+    }
+  }
+  

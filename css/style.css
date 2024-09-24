@@ -1,0 +1,70 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('Top-5.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+       
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.808); 
+            padding: 30px;
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            width: 300px; 
+            text-align: center; 
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px; 
+            color: #666666; 
+        }
+
+        .login-container label {
+            display: block;
+            margin-top: 10px; 
+            color: #333333; 
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%; 
+            padding: 10px;
+            margin: 10px 0; 
+            border: 1px solid #69cb19; 
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            background-color: #666; 
+            color: white; 
+            padding: 10px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer;
+            width: 100%; 
+        }
+
+        
+        .login-container button:hover {
+            background-color: #555555; 
+        }
+
+        
+        @media (max-width: 600px) {
+            .login-container {
+                width: 90%; 
+            }
+        }
+    
