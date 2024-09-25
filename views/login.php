@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
-
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form name="loginForm" action="/controllers/UserController.php?action=login" method="POST" onsubmit="return validateLoginForm()">
+        <form name="loginForm" action="../controllers/UserController.php?action=login" method="POST" onsubmit="return validateLoginForm()">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <div class="error" id="emailError"></div>
@@ -35,18 +40,15 @@
 
             let valid = true;
 
-        
             emailError.textContent = "";
             passwordError.textContent = "";
 
-            
             let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email)) {
                 emailError.textContent = "Please enter a valid email address";
                 valid = false;
             }
 
-            
             if (password.trim() === "") {
                 passwordError.textContent = "Password is required";
                 valid = false;
