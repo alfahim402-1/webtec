@@ -6,7 +6,6 @@ class UserController {
         $this->userModel = new User($pdo);
     }
 
-    
     public function login($email, $password) {
         $user = $this->userModel->getUserByEmail($email);
         if ($user && password_verify($password, $user['password'])) {
@@ -14,18 +13,17 @@ class UserController {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['role'] = $user['role'];
 
-            // Redirect based on role
+      
             if ($user['role'] == 'student') {
-                header('Location: /views/student_dashboard.php');
+                header('Location: ../views/student_dashboard.php');
             } elseif ($user['role'] == 'instructor') {
-                header('Location: /views/instructor_dashboard.php');
+                header('Location: ../views/instructor_dashboard.php');
             }
             exit();
         }
         return "Invalid login credentials.";
     }
 
-    
     public function register($name, $email, $password, $role) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return "Invalid email format";
@@ -38,7 +36,7 @@ class UserController {
         return $this->userModel->createUser($name, $email, $hashedPassword, $role);
     }
 
-   
+
     public function updateProfile($userId, $name, $email) {
         return $this->userModel->updateUserProfile($userId, $name, $email);
     }
